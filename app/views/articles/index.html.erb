@@ -14,7 +14,13 @@
     <tr>
       <td><%= a.title %></td>
       <td><%= a.description %></td>
-      <td><%= a.result %></td>
+      <td>
+        <% if a.result != nil %>
+          <%= a.result %>
+        <% else %>
+          -
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </tbody>
